@@ -16,7 +16,7 @@ and is designed for correlated currency pairs, commodities, or crypto data.
   <li><strong>Multiple Model Architectures:</strong>
     <ul>
       <li>TCN: Multi-scale causal convolutions with dilation, layer normalization, and residual connections.</li>
-      <li>TSMixer: Time-mixing + feature-mixing blocks inspired by FNet/MLP-Mixer architectures.</li>
+      <li>TSMixer: Time-mixing + feature mixing blocks inspired by FNet/MLP-Mixer architectures.</li>
       <li>RNN: Stacked GRU + LSTM layers with residual connections, dropout, and normalization.</li>
     </ul>
   </li>
@@ -38,7 +38,7 @@ The pipeline handles multiple forms of input:
 <h2>Model Architectures</h2>
 <ul>
   <li><strong>TCNBlock:</strong> Causal convolutions with multiple kernel sizes and dilation rates, residual connections, and dropout.</li>
-  <li><strong>TSMixerBlock:</strong> Dense time-mixing and feature-mixing layers with residual connections and layer normalization.</li>
+  <li><strong>TSMixerBlock:</strong> Dense time mixing and feature mixing layers with residual connections and layer normalization.</li>
   <li><strong>RNN Base:</strong> Stacked GRU + LSTM with residual connections, dropout, and layer normalization.</li>
 </ul>
 
@@ -85,10 +85,10 @@ train_ds = create_dataset(train_data, wl, batch_size)
 <h2>Why This Approach?</h2>
 <ul>
   <li>TCNs capture long-range temporal dependencies efficiently using causal convolutions and dilation.</li>
-  <li>TSMixer leverages time-mixing and feature-mixing layers to model global interactions in a lightweight way.</li>
+  <li>TSMixer leverages time mixing and feature mixing layers to model global interactions in a lightweight way.</li>
   <li>RNN variants provide complementary sequence modeling capabilities.</li>
   <li>Dynamic batch sizing and flexible windowing allow efficient scaling across datasets of different lengths.</li>
-  <li>Supports correlation-based analysis across multiple assets for multi-symbol modeling.</li>
+  <li>Supports correlation based analysis across multiple assets for multi symbol modeling.</li>
 </ul>
 
 <h2>Requirements</h2>
@@ -101,9 +101,9 @@ train_ds = create_dataset(train_data, wl, batch_size)
 
 <h2>Folder Structure</h2>
 <ul>
-  <li><code>datasets/</code> — CSV files for each symbol/timeframe/session</li>
-  <li><code>test_models/</code> — Trained Keras models will be saved here</li>
-  <li><code>scripts/</code> — Optional scripts for training and evaluation</li>
+  <li><code>datasets/</code> : CSV files for each symbol/timeframe/session</li>
+  <li><code>test_models/</code> : Trained Keras models will be saved here</li>
+  <li><code>scripts/</code> : Optional scripts for training and evaluation</li>
 </ul>
 
 <blockquote>
