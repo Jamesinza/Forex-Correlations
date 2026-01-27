@@ -2,7 +2,7 @@
 
 <p>
 This repository provides a modular pipeline for training deep learning models
-on short-window financial time series. It supports multiple architectures,
+on short window financial time series. It supports multiple architectures,
 including Temporal Convolutional Networks (TCN), TSMixer, and hybrid RNNs,
 and is designed for correlated currency pairs, commodities, or crypto data.
 </p>
